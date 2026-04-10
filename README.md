@@ -19,7 +19,13 @@ yarn install
 docker compose up -d
 ```
 
-6. Levantar:
+6. Ejecutar Seed
+
+```
+http://localhost:3000/api/seed
+```
+
+7. Levantar:
 
 ```
 yarn start:dev
