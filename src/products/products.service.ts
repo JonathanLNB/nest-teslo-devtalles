@@ -8,7 +8,7 @@ import {
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { DataSource, Repository } from 'typeorm';
-import { Product } from './entities/product.entity';
+import { Product } from './entities';
 import { InjectRepository } from '@nestjs/typeorm';
 import { validate as isValidUUID } from 'uuid';
 import { PaginationDto } from '../common/dtos/pagination.dto';
