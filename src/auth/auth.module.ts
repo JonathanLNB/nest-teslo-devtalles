@@ -24,8 +24,6 @@ import { JwtStrategy } from './strategies/jwt.strategy';
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const jwtSecret = configService.get('JWT_SECRET') ?? 'Prueba';
         const jwtLifetime = configService.get('JWT_LIFETIME') ?? '2h';
-        console.log('JWT Secret Process', jwtSecret);
-        console.log('JWT Secret ConfigModule', process.env.JWT_SECRET);
 
         return {
           secret: process.env.JWT_SECRET,
