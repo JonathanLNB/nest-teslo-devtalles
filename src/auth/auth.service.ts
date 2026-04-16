@@ -14,7 +14,7 @@ import { CreateUserDto } from './dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/auth.entity';
 import { LoginDto } from './dto';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
+import { JwtPayload } from './interfaces';
 
 @Injectable()
 export class AuthService {
@@ -62,6 +62,13 @@ export class AuthService {
 
     return {
       ...user,
+      token: this.getJWTToken({ id: user.id }),
+    };
+  }
+
+  checkAuthStatus(user: User) {
+    return {
+      user,
       token: this.getJWTToken({ id: user.id }),
     };
   }
